@@ -1,14 +1,18 @@
-<%- include ("./partials/header"); -%>
-    <h1>Home</h1>
-    <p><%= startingText %></p>
-    <% for( let index = 0; index < posts.length; index++ ) { %>
-        <% postTitle = posts[index].title %> 
-        <% postBody = posts[index].body %> 
-        <h1><%= postTitle %> </h1>
-        <% if (postBody.length >= 100) { %>
-            <p><%= postBody.substring(0, 100) + "..."; %><a href="/posts/<%= postTitle %> ">Read More</a> </p>
-        <% } else { %>
-            <p><%= postBody %> </p>
-        <% } %> 
-    <% } %>
-<%- include ("./partials/footer"); -%>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+
+<div class="jumbotron centered">
+  <div class="container">
+    <i class="fas fa-key fa-6x"></i>
+    <h1 class="display-3">Blog</h1>
+    <p class="lead">Login or Register to continue</p>
+    <hr>
+    <a class="btn btn-light btn-lg" href="/register" role="button">Register</a>
+    <a class="btn btn-dark btn-lg" href="/login" role="button">Login</a>
+
+  </div>
+</div>
+
+<!-- <%- include('partials/footer') %> -->
