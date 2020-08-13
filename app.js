@@ -97,6 +97,11 @@ app.get("/posts/:postId", function(req, res) {
 	});
 });
 
+app.get("/delete", function(req, res) {
+	posts.pop();
+	res.redirect("/userhome");
+});
+
 app.get("/logout", function(req, res) {
 	req.logout();
 	res.redirect("/");

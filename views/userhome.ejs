@@ -1,14 +1,15 @@
 <%- include ("./partials/loggedin"); -%>
     <h1>Home</h1>
-    <p><%= startingText %></p>
+    <p><%= startingText %></p> 
     <% for( let index = 0; index < posts.length; index++ ) { %>
         <% postTitle = posts[index].title %> 
         <% postBody = posts[index].body %> 
-        <h1><%= postTitle %> </h1>
+        <h1><%= postTitle %> </h1> 
         <% if (postBody.length >= 100) { %>
-            <p><%= postBody.substring(0, 100) + "..."; %><a href="/posts/<%= postTitle %> ">Read More</a> </p>
+            <p><%= postBody.substring(0, 100) + "..."; %><a href="/posts/<%= postTitle %> ">Read More</a> </p><<button class="btn-sm pull-right"><a href="/delete">del</a></button></p>
         <% } else { %>
-            <p><%= postBody %> </p>
+            <p><%= postBody %> <button class="btn-sm pull-right"><a href="/delete">del</a></button></p>     
         <% } %> 
     <% } %>
+    
 <%- include ("./partials/footer"); -%>
